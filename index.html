@@ -6,12 +6,25 @@
 	</title>
 	<script>
 		function button1_click() {
-			window.ue.WebBrowser.TestFunction(123).then( function(TheReturnedValue) { console.log(TheReturnedValue); } ).catch( function(error){ console.log(error); } )
+
+			window.ue.WebBrowser.TestFunction(123).then(
+				function(TheReturnedValue)
+				{
+					document.getElementById("test1").innerHTML = "Clicked";
+					console.log(TheReturnedValue);
+				} ).catch(
+					function(error)
+					{
+						document.getElementById("test1").innerHTML = error;
+						console.log(error);
+					})
 		}
 	</script>
 </head>
 <body>
-	<h1>Test 0.13</h1>
+	<h1>Test 0.14</h1>
 	<button id="button1" onclick="button1_click();" style="width: 200px; height: 50px;">버튼1</button>
+	<div id="test1">
+	</div>
 </body>
 </html>

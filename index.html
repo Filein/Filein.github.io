@@ -9,6 +9,7 @@
 	<h1>Test 0.16</h1>
 	<button id="button1" style="width: 200px; height: 50px;">버튼1</button>
 	<button id="button2" style="width: 200px; height: 50px;">버튼2</button>
+	<button id="button3" style="width: 200px; height: 50px;">테스트</button>
 	<div id="test1">
 	</div>
 
@@ -35,6 +36,9 @@
 			test1.innerHTML = result;
 			console.log(result);
 		});
-	</script>
+
+		document.getElementById("button3").addEventListener("click", function () {
+			test1.innerHTML = "<h1>테스트</h1>";
+		});	</script>
 </body>
 </html>

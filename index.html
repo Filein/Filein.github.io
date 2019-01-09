@@ -6,7 +6,7 @@
 	</title>
 </head>
 <body>
-	<h1>Test 0.19</h1>
+	<h1>Test 0.20</h1>
 	<button id="button1" style="width: 200px; height: 50px;">버튼1</button>
 	<button id="button2" style="width: 200px; height: 50px;">버튼2</button>
 	<button id="button3" style="width: 200px; height: 50px;">테스트</button>
@@ -16,7 +16,7 @@
 	<script>
 		var test1 = document.getElementById("test1");
 		document.getElementById("button1").addEventListener("click", function () {
-			window.ue4.MyObject.FunctionA(123).then(
+			ue4.MyObject.FunctionA(123).then(
 				function(TheReturnedValue)
 				{
 					test1.innerHTML = "Clicked";
@@ -32,7 +32,7 @@
 		});
 
 		document.getElementById("button2").addEventListener("click", function () {
-			var result = window.ue4.MyObject.FunctionA(123);
+			var result = ue4.MyObject.FunctionA(123);
 			test1.innerHTML = result;
 			console.log(result);
 		});

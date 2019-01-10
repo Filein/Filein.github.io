@@ -15,6 +15,7 @@
 
 	<script>
 		var test1 = document.getElementById("test1");
+
 		document.getElementById("button1").addEventListener("click", function () {
 			window.ue.WebBrowser.TestFunction(123).then(
 				function(TheReturnedValue)
@@ -32,9 +33,7 @@
 		});
 
 		document.getElementById("button2").addEventListener("click", function () {
-			var result = window.ue.WebBrowser.TestFunction(123);
-			test1.innerHTML = result;
-			console.log(result);
+			test1.innerText = JSON.stringify(Object.keys(window), null, 4);
 		});
 
 		document.getElementById("button3").addEventListener("click", function () {
